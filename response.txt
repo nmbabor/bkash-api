@@ -1,0 +1,41 @@
+// Create Payment Response:
+
+{
+	"paymentID":"1ZUJYRN1557142466699",
+	"createTime":"2019-05-06T11:31:02:611 GMT+0000",
+	"orgLogo":"https://s3-ap-southeast-1.amazonaws.com/merchantlogo.sandbox.bka.sh/merchant-default-logo.png",
+	"orgName":"TestDemoMerchant",
+	"transactionStatus":"Initiated",
+	"amount":"100",
+	"currency":"BDT",
+	"intent":"sale",
+	"merchantInvoiceNumber":"5221545541"
+}
+
+// Excecute Payment Response: 
+{
+	"paymentID":"1ZUJYRN1557142466699",
+	"createTime":"2019-05-06T11:34:26:731 GMT+0000",
+	"updateTime":"2019-05-06T11:34:47:830 GMT+0000",
+	"trxID":"6E6101NYMV",
+	"transactionStatus":"Completed",
+	"amount":"1000",
+	"currency":"BDT",
+	"intent":"sale",
+	"merchantInvoiceNumber":"i1234567i8"
+}
+
+/*
+Endpoint URL:(POST) 'http://api.edusys.live/bkashFeedback.php?secret=Edu@Leam'
+
+Example of Body attributes:
+*/
+{
+    "invoice": "1234567",
+    "customer_number": "01811951215",
+    "payment_id": "p124223233",
+    "amount": 2000,
+    "trx_id": "as354a",
+    "transaction_status": "completed",
+    "payment_date": "2018-06-01"
+}

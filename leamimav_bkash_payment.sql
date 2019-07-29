@@ -1,0 +1,147 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Jul 02, 2019 at 08:38 AM
+-- Server version: 10.1.40-MariaDB-cll-lve
+-- PHP Version: 7.1.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `leamimav_bkash_payment`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `invoice_list`
+--
+
+CREATE TABLE `invoice_list` (
+  `id` int(11) NOT NULL,
+  `invoice` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `payment_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `transaction_status` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `trx_id` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `amount` float NOT NULL,
+  `payment_date` datetime NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `details` text COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `invoice_list`
+--
+
+INSERT INTO `invoice_list` (`id`, `invoice`, `payment_id`, `transaction_status`, `trx_id`, `amount`, `payment_date`, `created_at`, `details`) VALUES
+(2, 'bcic-343871456', 'BXP1F0H1557817529154', 'Completed', '6EE6G0GAS6', 1, '2019-05-14 07:05:29', '2019-05-14 07:10:46', NULL),
+(3, 'bcic-123321456', 'SZ6J5ON1557818347136', 'Completed', '6EE8G0MYLU', 1, '2019-05-14 07:19:07', '2019-05-14 07:19:49', NULL),
+(4, 'PEDU-1-3', 'NCUJN441557901192133', 'Completed', '6EF8GE77CW', 1, '2019-05-15 06:19:52', '2019-05-15 06:21:29', NULL),
+(5, 'PEDU-80-1', 'BUNYU011557903363739', 'Completed', '6EF9GEQVQL', 1, '2019-05-15 06:56:03', '2019-05-15 06:56:37', NULL),
+(6, 'PEDU-5-3', 'XOZEVQO1557913549898', 'Completed', '6EF7GGVSZB', 1, '2019-05-15 09:45:49', '2019-05-15 09:46:55', NULL),
+(7, 'PEDU-81-2', 'P64BEDH1557913984527', 'Completed', '6EF7GGZLI1', 1, '2019-05-15 09:53:04', '2019-05-15 09:54:58', NULL),
+(8, 'PEDU-80-4', '302E0981557915165743', 'Completed', '6EF1GH8OYR', 1, '2019-05-15 10:12:45', '2019-05-15 10:13:51', NULL),
+(9, 'PEDU-85-5', '1PPL6241557997890490', 'Completed', '6EG2GUW7NY', 1, '2019-05-16 09:11:30', '2019-05-16 09:12:22', NULL),
+(10, 'PEDU-81-7', 'NEULQFM1558002598278', 'Completed', '6EG0GW04E4', 1, '2019-05-16 10:29:58', '2019-05-16 10:31:36', NULL),
+(11, 'PEDU-81-7', 'XSMGHA11558005210696', 'Completed', '6EG6GWN1NQ', 1, '2019-05-16 11:13:30', '2019-05-16 11:14:27', NULL),
+(12, 'PEDU-81-8', '4EW7M5G1558020726263', 'Completed', '6EG6H19PJA', 1000, '2019-05-16 15:32:06', '2019-05-16 15:34:42', NULL),
+(13, 'PEDU-81-9', 'W1MVV891558021871622', 'Completed', '6EG0H1KK7A', 10, '2019-05-16 15:51:11', '2019-05-16 15:52:53', NULL),
+(14, 'PEDU-30-11', '4LY9KIS1558023288400', 'Completed', '6EG8H1Y48E', 10, '2019-05-16 16:14:48', '2019-05-16 16:15:55', NULL),
+(15, 'PEDU-30-12', 'QRSAGJP1558024544358', 'Completed', '6EG4H290RO', 2, '2019-05-16 16:35:44', '2019-05-16 16:36:29', NULL),
+(16, 'PEDU-81-7', 'TA9YP5S1558064883770', 'Completed', '6EH6H4NUS4', 1, '2019-05-17 03:48:03', '2019-05-17 03:49:26', NULL),
+(17, 'PEDU-81-13', 'EJHH0DZ1558065532699', 'Completed', '6EH2H4S1UC', 1, '2019-05-17 03:58:52', '2019-05-17 04:00:01', NULL),
+(18, 'PEDU-81-14', '461PF741558066091772', 'Completed', '6EH6H4VXNS', 10, '2019-05-17 04:08:11', '2019-05-17 04:09:11', NULL),
+(19, 'PEDU-81-15', 'SFURUPD1558066610453', 'Completed', '6EH8H4ZSUE', 1, '2019-05-17 04:16:50', '2019-05-17 04:17:46', NULL),
+(20, 'PEDU-81-16', 'NXATY6P1558067238330', 'Completed', '6EH7H54J3T', 2, '2019-05-17 04:27:18', '2019-05-17 04:28:03', NULL),
+(21, 'PEDU-81-17', 'PKM1W2N1558104447832', 'Completed', '6EH3HCWIIL', 1, '2019-05-17 14:47:27', '2019-05-17 14:48:49', NULL),
+(22, 'PEDU-90-18', '68345IH1558108323166', 'Completed', '6EH6HDS274', 1, '2019-05-17 15:52:03', '2019-05-17 15:52:39', NULL),
+(23, 'PEDU-91-19', 'L928VS41558111404208', 'Completed', '6EH3HEHS9N', 1, '2019-05-17 16:43:24', '2019-05-17 16:51:42', NULL),
+(24, 'PEDU-30-20', 'MTAHLHK1558167343115', 'Completed', '6EI5HKF323', 1, '2019-05-18 08:15:43', '2019-05-18 08:17:39', NULL),
+(25, 'PEDU-81-22', 'CMXCQON1558170182016', 'Completed', '6EI6HKZCRK', 1, '2019-05-18 09:03:02', '2019-05-18 09:04:35', NULL),
+(26, 'PEDU-81-23', 'HRS7FQP1558170969612', 'Completed', '6EI2HL4M8U', 1, '2019-05-18 09:16:09', '2019-05-18 09:16:58', NULL),
+(27, 'PEDU-30-24', 'AJUQ2GT1558171590522', 'Completed', '6EI1HL950J', 1, '2019-05-18 09:26:30', '2019-05-18 09:27:22', NULL),
+(28, 'PEDU-80-25', 'JG2ZK7P1558172062964', 'Completed', '6EI0HLCMRG', 1, '2019-05-18 09:34:23', '2019-05-18 09:35:23', NULL),
+(29, 'PEDU-94-26', '2R04B891558176360040', 'Completed', '6EI4HMB1BW', 1, '2019-05-18 10:46:00', '2019-05-18 10:46:37', NULL),
+(30, 'PEDU-30-26', 'FH9WWK91558240739685', 'Completed', '6EJ5HV9MX3', 1, '2019-05-19 04:38:59', '2019-05-19 04:39:38', NULL),
+(31, 'PEDU-81-28', 'DP25J5U1558257635282', 'Completed', '6EJ1HZEBRH', 1, '2019-05-19 09:20:35', '2019-05-19 09:21:26', NULL),
+(32, 'PE-82-100-1', '6ZSKV4T1558359710351', 'Completed', '6EK4IHG6C0', 1000, '2019-05-20 13:41:50', '2019-05-20 13:54:34', NULL),
+(33, 'PE-81-105-2', 'H92Y6061558520287733', 'Completed', '6EM0J6ZREO', 1000, '2019-05-22 10:18:07', '2019-05-22 10:18:45', NULL),
+(34, 'PE-81-105-4', 'W2LKPFH1558710336907', 'Completed', '6EO4K49TQQ', 11350, '2019-05-24 15:05:37', '2019-05-24 15:06:23', NULL),
+(35, 'PE-82-114-5', 'LLT8PCT1558845339138', 'Completed', '6EQ8KNQ0IQ', 1000, '2019-05-26 04:35:39', '2019-05-26 04:36:14', NULL),
+(36, 'PE-82-121-6', 'DJ2TIJW1559198352605', 'Completed', '6EU2MHB9CQ', 1000, '2019-05-30 06:39:12', '2019-05-30 06:40:09', NULL),
+(37, 'PE-81-195-7', 'B40BOJG1560349651934', 'Completed', '6FC1RDQONN', 1000, '2019-06-12 14:27:31', '2019-06-12 14:31:09', NULL),
+(38, 'PE-81-196-8', 'Y8N5Y1E1560416876092', 'Completed', '6FD3RLJ03D', 1000, '2019-06-13 09:07:56', '2019-06-13 09:09:06', NULL),
+(39, 'PE-83-199-13', '3IMQNJ91560694490889', 'Completed', '6FG0SPA2KK', 1000, '2019-06-16 14:14:50', '2019-06-16 14:15:51', NULL),
+(40, 'PE-81-210-21', 'H6BGJPF1561453358004', 'Completed', '6FP6VW8RNU', 1, '2019-06-25 09:02:38', '2019-06-25 09:05:14', NULL),
+(41, 'PE-81-210-24', '0J56CGH1561454296559', 'Completed', '6FP9VWE1QF', 1, '2019-06-25 09:18:16', '2019-06-25 09:19:58', NULL),
+(42, 'PE-81-210-26', 'W5JFLZB1561455486434', 'Completed', '6FP4VWL1TU', 1, '2019-06-25 09:38:06', '2019-06-25 09:39:10', NULL),
+(43, 'PE-81-210-27', '3ANILR91561456077210', 'Completed', '6FP8VWOPLA', 1, '2019-06-25 09:47:57', '2019-06-25 09:49:15', NULL),
+(44, 'PE-81-210-29', 'Z774V1Q1561456982759', 'Completed', '6FP9VWU6Y1', 1, '2019-06-25 10:03:02', '2019-06-25 10:04:09', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payment`
+--
+
+CREATE TABLE `payment` (
+  `id` int(11) NOT NULL,
+  `invoice` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `customer_number` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `payment_id` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `amount` float DEFAULT NULL,
+  `trx_id` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `payment_date` date DEFAULT NULL,
+  `transaction_status` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `details` longtext COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `invoice_list`
+--
+ALTER TABLE `invoice_list`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `payment`
+--
+ALTER TABLE `payment`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `invoice` (`invoice`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `invoice_list`
+--
+ALTER TABLE `invoice_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT for table `payment`
+--
+ALTER TABLE `payment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
